@@ -1,0 +1,1285 @@
+:root {
+  --color-console: #dad3e1;
+  --color-screencontaner: #70677e;
+  --color-abutton: #fde920;
+  --color-bbutton: #ffabc4;
+  --color-outline: #424242;
+}
+
+.gameConsoleContainer {
+  border-color: var(--color-outline);
+  border-style: solid;
+  border-width: 0.35rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 816px;
+  height: 840px;
+  background-color: var(--color-console);
+  border-top-right-radius: 36px;
+  border-top-left-radius: 36px;
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 96px;
+}
+.gameConsoleScreenContainer {
+  border-color: var(--color-outline);
+  border-style: solid;
+  border-width: 0.35rem;
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96%;
+  height: 60%;
+  background-color: var(--color-screencontaner);
+  padding-bottom: 54px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 40px;
+}
+.consoleLogo {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.consoleModel {
+  position: absolute;
+  width: 35%;
+  height: 35%;
+  top: 106%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.gameConsoleScreenOutline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background-color: var(--color-outline);
+}
+.gameConsoleCtrlsContainer {
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96%;
+  height: 30%;
+}
+.gameConsoleButtons {
+  display: flex;
+  width: 50%;
+  height: 50%;
+  background-color: var(--color-console);
+}
+.buttonBContainer {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  background-color: var(--color-console);
+}
+.buttonB {
+  border-color: var(--color-outline);
+  border-style: solid;
+  border-width: 0.3rem;
+  width: 32%;
+  height: 50%;
+  border-radius: 100%;
+  background-color: var(--color-bbutton);
+}
+.buttonAContainer {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 50%;
+  background-color: var(--color-console);
+}
+.buttonA {
+  border-color: var(--color-outline);
+  border-style: solid;
+  border-width: 0.3rem;
+  width: 32%;
+  height: 50%;
+  border-radius: 100%;
+  background-color: var(--color-abutton);
+}
+p.buttonText {
+  font-size: 0.8rem;
+  color: #424242;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 3px;
+}
+.gameConsolePadContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 50%;
+  height: 80%;
+  background-color: var(--color-console);
+}
+.gameConsolePad {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.consoleSpeaker {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  top: 85%;
+  left: 85%;
+  z-index: 1;
+}
+.topArrowPos {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+.topArrowDesign {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  background-color: var(--color-outline);
+}
+.topArrowArrow {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.middleArrowRightPos {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  left: 50%;
+  transform: translate(46%, -50%);
+}
+.middleArrowRightDesign {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top-right-radius: 6px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 6px;
+  background-color: var(--color-outline);
+}
+.middleArrowRightArrow {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bottomArrowPos {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -110%);
+}
+.bottomArrowDesign {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background-color: var(--color-outline);
+}
+.bottomArrowArrow {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.middleArrowLeftPos {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-148%, -50%);
+}
+.middleArrowLeftDesign {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 6px;
+  background-color: var(--color-outline);
+}
+.middleArrowLeftArrow {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.middleArrowCircle {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(94, 94, 94);
+  border-radius: 100%;
+}
+.middleArrowMiddlePos {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-outline);
+}
+.gameCanvas {
+  position: absolute;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 672px;
+  height: 378px;
+}
+
+/*--------------------------------------2XL SCREENS --------------------------------------------- */
+/*--------------------------------------2XL SCREENS --------------------------------------------- */
+/*--------------------------------------2XL SCREENS --------------------------------------------- */
+/*--------------------------------------2XL SCREENS --------------------------------------------- */
+/*--------------------------------------2XL SCREENS --------------------------------------------- */
+@media (min-width: 1536px) {
+  .gameConsoleContainer {
+    border-width: 0.35rem;
+    width: 816px;
+    height: 840px;
+    border-top-right-radius: 36px;
+    border-top-left-radius: 36px;
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 96px;
+  }
+  .gameConsoleScreenContainer {
+    border-width: 0.42rem;
+    padding-bottom: 64.8px;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 48px;
+  }
+  .gameConsoleScreenOutline {
+    width: 684px;
+    height: 390px;
+  }
+  /*-----------*/
+  /*CONSOLE CTRLS*/
+  .buttonBContainer {
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+  .buttonB {
+    border-width: 0.36rem;
+  }
+  .buttonAContainer {
+    margin-top: 12px;
+    margin-left: 12px;
+  }
+  .buttonA {
+    border-width: 0.36rem;
+  }
+  p.buttonText {
+    font-size: 1.2rem;
+    padding-bottom: 3px;
+  }
+  /*-----------*/
+  /*CONSOLE PAD*/
+  .gameConsolePadContainer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .topArrowPos {
+    width: 48px;
+    height: 48px;
+  }
+  .topArrowDesign {
+    width: 48px;
+    height: 48px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  .middleArrowRightPos {
+    width: 48px;
+    height: 48px;
+  }
+  .middleArrowRightDesign {
+    width: 48px;
+    height: 48px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 6px;
+  }
+  .bottomArrowPos {
+    width: 48px;
+    height: 48px;
+  }
+  .bottomArrowDesign {
+    width: 48px;
+    height: 48px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+  .middleArrowLeftPos {
+    width: 48px;
+    height: 48px;
+  }
+  .middleArrowLeftDesign {
+    width: 48px;
+    height: 48px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 6px;
+  }
+  .middleArrowMiddlePos {
+    width: 48px;
+    height: 48px;
+  }
+  .gameCanvas {
+    width: 672px;
+    height: 378px;
+  }
+}
+/*--------------------------------------XL SCREENS ---------------------------------------------- */
+/*--------------------------------------XL SCREENS ---------------------------------------------- */
+/*--------------------------------------XL SCREENS ---------------------------------------------- */
+/*--------------------------------------XL SCREENS ---------------------------------------------- */
+/*--------------------------------------XL SCREENS ---------------------------------------------- */
+@media (min-width: 1280px) and (max-width: 1536px) {
+  .gameConsoleContainer {
+    border-width: 0.35rem;
+    width: 680px;
+    height: 700px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 80px;
+  }
+  .gameConsoleScreenContainer {
+    border-width: 0.35rem;
+    padding-bottom: 54px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 40px;
+  }
+  .gameConsoleScreenOutline {
+    width: 570px;
+    height: 325px;
+  }
+  /*-----------*/
+  /*CONSOLE CTRLS*/
+  .buttonBContainer {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .buttonB {
+    border-width: 0.3rem;
+  }
+  .buttonAContainer {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .buttonA {
+    border-width: 0.3rem;
+  }
+  p.buttonText {
+    font-size: 1rem;
+    padding-bottom: 3px;
+  }
+  /*-----------*/
+  /*CONSOLE PAD*/
+  .gameConsolePadContainer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .topArrowPos {
+    width: 40px;
+    height: 40px;
+  }
+  .topArrowDesign {
+    width: 40px;
+    height: 40px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  .middleArrowRightPos {
+    width: 40px;
+    height: 40px;
+  }
+  .middleArrowRightDesign {
+    width: 40px;
+    height: 40px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+  }
+  .bottomArrowPos {
+    width: 40px;
+    height: 40px;
+  }
+  .bottomArrowDesign {
+    width: 40px;
+    height: 40px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  .middleArrowLeftPos {
+    width: 40px;
+    height: 40px;
+  }
+  .middleArrowLeftDesign {
+    width: 40px;
+    height: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+  }
+  .middleArrowMiddlePos {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gameCanvas {
+    width: 560px; /* larger size */
+    height: 315px; /* larger size */
+  }
+}
+
+/*--------------------------------------LG SCREENS ---------------------------------------------- */
+/*--------------------------------------LG SCREENS ---------------------------------------------- */
+/*--------------------------------------LG SCREENS ---------------------------------------------- */
+/*--------------------------------------LG SCREENS ---------------------------------------------- */
+/*--------------------------------------LG SCREENS ---------------------------------------------- */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .gameConsoleContainer {
+    border-width: 0.3rem;
+    width: 544px;
+    height: 560px;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 64px;
+  }
+  .gameConsoleScreenContainer {
+    border-width: 0.3rem;
+    padding-bottom: 43.2px;
+    border-top-right-radius: 9.6px;
+    border-top-left-radius: 9.6px;
+    border-bottom-left-radius: 9.6px;
+    border-bottom-right-radius: 32px;
+  }
+  .gameConsoleScreenOutline {
+    width: 456px;
+    height: 260px;
+  }
+  /*-----------*/
+  /*CONSOLE CTRLS*/
+  .buttonBContainer {
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+  .buttonB {
+    border-width: 0.2rem;
+  }
+  .buttonAContainer {
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+  .buttonA {
+    border-width: 0.2rem;
+  }
+  p.buttonText {
+    font-size: 0.8rem;
+    padding-bottom: 3px;
+  }
+  /*-----------*/
+  /*CONSOLE PAD*/
+  .gameConsolePadContainer {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .topArrowPos {
+    width: 32px;
+    height: 32px;
+  }
+  .topArrowDesign {
+    width: 32px;
+    height: 32px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+  .middleArrowRightPos {
+    width: 32px;
+    height: 32px;
+  }
+  .middleArrowRightDesign {
+    width: 32px;
+    height: 32px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 4px;
+  }
+  .bottomArrowPos {
+    width: 32px;
+    height: 32px;
+  }
+  .bottomArrowDesign {
+    width: 32px;
+    height: 32px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .middleArrowLeftPos {
+    width: 32px;
+    height: 32px;
+  }
+  .middleArrowLeftDesign {
+    width: 32px;
+    height: 32px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 4px;
+  }
+  .middleArrowMiddlePos {
+    width: 32px;
+    height: 32px;
+  }
+  .gameCanvas {
+    width: 448px; /* larger size */
+    height: 252px; /* larger size */
+  }
+}
+
+/*--------------------------------------MD SCREENS ---------------------------------------------- */
+/*--------------------------------------MD SCREENS ---------------------------------------------- */
+/*--------------------------------------MD SCREENS ---------------------------------------------- */
+/*--------------------------------------MD SCREENS ---------------------------------------------- */
+/*--------------------------------------MD SCREENS ---------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gameConsoleContainer {
+    border-width: 0.2rem;
+    position: absolute;
+    width: 408px;
+    height: 420px;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 48px;
+  }
+  .gameConsoleScreenContainer {
+    border-width: 0.2rem;
+    padding-bottom: 32.4px;
+    border-top-right-radius: 7.2px;
+    border-top-left-radius: 7.2px;
+    border-bottom-left-radius: 7.2px;
+    border-bottom-right-radius: 24px;
+  }
+  .gameConsoleScreenOutline {
+    width: 342px;
+    height: 195px;
+  }
+  /*-----------*/
+  /*CONSOLE CTRLS*/
+  .buttonBContainer {
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }
+  .buttonB {
+    border-width: 0.187rem;
+  }
+  .buttonAContainer {
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+  .buttonA {
+    border-width: 0.187rem;
+  }
+  p.buttonText {
+    font-size: 0.6rem;
+    padding-bottom: 3px;
+  }
+  /*-----------*/
+  /*CONSOLE PAD*/
+  .gameConsolePadContainer {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .topArrowPos {
+    width: 24px;
+    height: 24px;
+  }
+  .topArrowDesign {
+    width: 24px;
+    height: 24px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+  .middleArrowRightPos {
+    width: 24px;
+    height: 24px;
+  }
+  .middleArrowRightDesign {
+    width: 24px;
+    height: 24px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 3px;
+  }
+  .bottomArrowPos {
+    width: 24px;
+    height: 24px;
+  }
+  .bottomArrowDesign {
+    width: 24px;
+    height: 24px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  .middleArrowLeftPos {
+    width: 24px;
+    height: 24px;
+  }
+  .middleArrowLeftDesign {
+    width: 24px;
+    height: 24px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 3px;
+  }
+  .middleArrowMiddlePos {
+    width: 24px;
+    height: 24px;
+  }
+  .gameCanvas {
+    width: 336px; /* larger size */
+    height: 189px; /* larger size */
+  }
+}
+
+/*--------------------------------------SM SCREENS ---------------------------------------------- */
+/*--------------------------------------SM SCREENS ---------------------------------------------- */
+/*--------------------------------------SM SCREENS ---------------------------------------------- */
+/*--------------------------------------SM SCREENS ---------------------------------------------- */
+/*--------------------------------------SM SCREENS ---------------------------------------------- */
+@media (min-width: 0px) and (max-width: 767px) {
+  .gameConsoleContainer {
+    border-width: 0.2rem;
+    width: 340px;
+    height: 350px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 40px;
+  }
+  .gameConsoleScreenContainer {
+    border-width: 0.2rem;
+    padding-bottom: 27px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 20px;
+  }
+  .gameConsoleScreenOutline {
+    width: 286px;
+    height: 162.5px;
+  }
+  /*-----------*/
+  /*CONSOLE CTRLS*/
+  .buttonBContainer {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  .buttonB {
+    border-width: 0.18rem;
+  }
+  .buttonAContainer {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  .buttonA {
+    border-width: 0.18rem;
+  }
+  p.buttonText {
+    font-size: 0.5rem;
+    padding-bottom: 2px;
+  }
+  /*-----------*/
+  /*CONSOLE PAD*/
+  .gameConsolePadContainer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .topArrowPos {
+    width: 20px;
+    height: 20px;
+  }
+  .topArrowDesign {
+    width: 20px;
+    height: 20px;
+    border-top-right-radius: 2.5px;
+    border-top-left-radius: 2.5px;
+  }
+  .middleArrowRightPos {
+    width: 20px;
+    height: 20px;
+  }
+  .middleArrowRightDesign {
+    width: 20px;
+    height: 20px;
+    border-top-right-radius: 2.5px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 2.5px;
+  }
+  .bottomArrowPos {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -110%);
+  }
+  .bottomArrowDesign {
+    width: 20px;
+    height: 20px;
+    border-bottom-right-radius: 2.5px;
+    border-bottom-left-radius: 2.5px;
+  }
+  .middleArrowLeftPos {
+    width: 20px;
+    height: 20px;
+  }
+  .middleArrowLeftDesign {
+    width: 20px;
+    height: 20px;
+    border-top-left-radius: 2.5px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 2.5px;
+  }
+  .middleArrowMiddlePos {
+    width: 20px;
+    height: 20px;
+  }
+  .gameCanvas {
+    width: 280px; /* larger size */
+    height: 157.5px; /* larger size */
+  }
+}
+
+/*-------------------------------------- Small Mobiles ------------------------------------------ */
+/*-------------------------------------- Small Mobiles ------------------------------------------ */
+/*-------------------------------------- Small Mobiles ------------------------------------------ */
+/*-------------------------------------- Small Mobiles ------------------------------------------ */
+@media only screen and (min-width: 375px) and (max-width: 667px) and (min-height: 667px) {
+  .gameConsoleContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 550px;
+    background-color: var(--color-console);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 25px;
+  }
+  .gameConsoleScreenContainer {
+    position: absolute;
+    top: 2.8%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92%;
+    height: 55%;
+    padding-bottom: 50px;
+  }
+  .consoleLogo {
+    width: 25%;
+    height: 25%;
+    top: 72%;
+    left: 50%;
+  }
+  .consoleModel {
+    width: 50%;
+    height: 50%;
+    top: 111%;
+  }
+  .consoleSpeaker {
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    top: 87.4%;
+    left: 80%;
+    z-index: 1;
+  }
+  .gameConsoleScreenOutline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92%;
+    height: 88.7%;
+    background-color: var(--color-outline);
+  }
+  /*-----------*/
+  /*CONSOLE CTRLS*/
+  .gameConsoleCtrlsContainer {
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+  }
+  p.buttonText {
+    font-size: 0.8rem;
+    color: #424242;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 3px;
+  }
+  .buttonBContainer {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    width: 50%;
+  }
+  .buttonB {
+    width: 51%;
+    height: 56%;
+    border-radius: 100%;
+    border-color: var(--color-outline);
+    border-style: solid;
+    border-width: 0.2rem;
+  }
+
+  .buttonAContainer {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 50%;
+  }
+  .buttonA {
+    width: 51%;
+    height: 56%;
+    border-radius: 100%;
+    border-color: var(--color-outline);
+    border-style: solid;
+    border-width: 0.22rem;
+  }
+
+  /*-----------*/
+  /*CONSOLE PAD*/
+  .gameConsolePadContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 50%;
+    height: 80%;
+  }
+  .gameConsolePad {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .topArrowPos {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 5%);
+  }
+  .topArrowDesign {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+  .middleArrowLeftPos {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-148%, -50%);
+  }
+  .middleArrowLeftDesign {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 3px;
+  }
+  .middleArrowRightPos {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(48%, -50%);
+  }
+  .middleArrowRightDesign {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top-right-radius: 3px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 3px;
+  }
+  .bottomArrowPos {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -102%);
+  }
+  .bottomArrowDesign {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  .middleArrowMiddlePos {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .gameCanvas {
+    width: 280px; /* larger size */
+    height: 210px; /* larger size */
+  }
+}
+
+/*---------------------------------------- Tablets ---------------------------------------------- */
+/*---------------------------------------- Tablets ---------------------------------------------- */
+/*---------------------------------------- Tablets ---------------------------------------------- */
+/*---------------------------------------- Tablets ---------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) {
+  .consoleLogo {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .consoleModel {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 107%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .gameConsoleContainer {
+    border-color: var(--color-outline);
+    border-style: solid;
+    border-width: 0.35rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 693px;
+    height: 949.5px;
+    background-color: var(--color-console);
+    border-top-right-radius: 11.25px;
+    border-top-left-radius: 11.25px;
+    border-bottom-left-radius: 11.25px;
+    border-bottom-right-radius: 75px;
+  }
+  .gameConsoleScreenContainer {
+    border-color: var(--color-outline);
+    border-style: solid;
+    border-width: 0.35rem;
+    position: absolute;
+    top: 2.8%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92%;
+    height: 55%;
+    background-color: var(--color-screencontaner);
+    padding-bottom: 75px;
+    border-top-right-radius: 11.25px;
+    border-top-left-radius: 11.25px;
+    border-bottom-left-radius: 11.25px;
+    border-bottom-right-radius: 37.5px;
+  }
+  .gameConsoleScreenOutline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92.5%;
+    height: 89.2%;
+    background-color: #424242;
+  }
+
+  /*-----------*/
+  /*CONSOLE CTRLS*/
+  .gameConsoleCtrlsContainer {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+  }
+  .gameConsoleButtons {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    background-color: var(--color-console);
+  }
+  p.buttonText {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 3px;
+  }
+  .buttonBContainer {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-right: 7.5px;
+    margin-bottom: 15px;
+    width: 50%;
+    background-color: var(--color-console);
+  }
+  .buttonB {
+    border-color: var(--color-outline);
+    border-style: solid;
+    border-width: 0.35rem;
+    width: 44%;
+    height: 56%;
+    border-radius: 100%;
+    background-color: var(--color-bbutton);
+  }
+
+  .buttonAContainer {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-left: 7.5px;
+    margin-top: 15px;
+    width: 50%;
+    background-color: var(--color-console);
+  }
+  .buttonA {
+    border-color: var(--color-outline);
+    border-style: solid;
+    border-width: 0.35rem;
+    width: 44%;
+    height: 56%;
+    border-radius: 100%;
+    background-color: var(--color-abutton);
+  }
+  /*-----------*/
+  /*CONSOLE PAD*/
+  .gameConsolePadContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 50%;
+    height: 80%;
+    background-color: var(--color-console);
+  }
+  .gameConsolePad {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .topArrowPos {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  .topArrowDesign {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color: var(--color-outline);
+  }
+  .middleArrowLeftPos {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-148%, -50%);
+  }
+  .middleArrowLeftDesign {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 8px;
+    background-color: var(--color-outline);
+  }
+  .middleArrowRightPos {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(48%, -50%);
+  }
+  .middleArrowRightDesign {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 8px;
+    background-color: var(--color-outline);
+  }
+  .bottomArrowPos {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -149%);
+  }
+  .bottomArrowDesign {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: var(--color-outline);
+  }
+  .middleArrowMiddlePos {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-outline);
+  }
+  .consoleSpeaker {
+    position: absolute;
+    width: 13%;
+    height: 13%;
+    top: 87%;
+    left: 82%;
+    z-index: 1;
+  }
+  .gameCanvas {
+    width: 562.5px; /* larger size */
+    height: 375px; /* larger size */
+  }
+}

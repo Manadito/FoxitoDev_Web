@@ -1,0 +1,277 @@
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Imported Fonts */
+
+@font-face {
+  font-family: "Roundo_Regular";
+  src: url("./assets/fonts/Roundo_Regular.ttf");
+}
+
+@font-face {
+  font-family: "Arcadepix_Plus";
+  src: url("./assets/fonts/Arcadepix_Plus.ttf");
+}
+
+@font-face {
+  font-family: "Simply_Rounded";
+  src: url("./assets/fonts/Simply_Rounded.ttf");
+}
+
+/* body {
+  background-color: black;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+} */
+
+.wrapper {
+  position: relative;
+  padding: 10px;
+  width: 300px;
+  height: 200px;
+  transform: scale(0.5);
+  transform-origin: center;
+}
+
+.button {
+  scale: 0.5;
+  padding: 2px;
+  border-radius: 5px;
+  position: absolute;
+  top: 140px;
+  left: 200px;
+  background-color: orange;
+}
+
+/* Loading screen CSS classes */
+
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(#000000, #000000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s;
+  z-index: 1;
+  font-family: "Almendra", serif;
+}
+
+.loadingScreen__board {
+  position: relative;
+  background-color: rgba(30, 32, 31, 0.42);
+  text-align: center;
+  border: rgb(0 0 0 / 12%);
+  transition: opacity 0.4s;
+}
+
+.loadingScreen__title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: rgb(255, 249, 137);
+}
+
+.loadingScreen__button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: rgba(0, 0, 0, 0.24);
+  color: rgb(242, 101, 101);
+  border-style: dashed;
+  border-color: white;
+  border-width: 2px;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: background-color 0.4s;
+  font-family: "Almendra", serif;
+}
+
+.loadingScreen__button:hover {
+  background-color: rgba(0, 0, 0, 0.42);
+  cursor: pointer;
+}
+
+.loadingScreen__button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.loadingScreen__progress {
+  position: absolute;
+  bottom: 50;
+  left: 50;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.loadingScreen__progress__value {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.4s;
+}
+
+.loadingScreen--started {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loadingScreen--started .loadingScreen__board {
+  opacity: 0;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking-cursor {
+  animation: blink 1s step-start 0s infinite;
+}
+
+/*--------------------------------------2XL SCREENS --------------------------------------------- */
+/*--------------------------------------2XL SCREENS --------------------------------------------- */
+/*--------------------------------------2XL SCREENS --------------------------------------------- */
+/*--------------------------------------2XL SCREENS --------------------------------------------- */
+/*--------------------------------------2XL SCREENS --------------------------------------------- */
+@media (min-width: 1535px) {
+  .loadingScreen__board {
+    height: 480px;
+    width: 780px;
+    border-radius: 28.8px;
+  }
+  .loadingScreen__title {
+    font-size: 1.8rem;
+  }
+  .loadingScreen__button {
+    width: 192px;
+    height: 144px;
+    padding: 9.6px 38.4px;
+    font-size: 3rem;
+  }
+  .loadingScreen__progress {
+    width: 600px;
+    height: 14.4px;
+  }
+}
+
+/*--------------------------------------XL SCREENS ---------------------------------------------- */
+/*--------------------------------------XL SCREENS ---------------------------------------------- */
+/*--------------------------------------XL SCREENS ---------------------------------------------- */
+/*--------------------------------------XL SCREENS ---------------------------------------------- */
+/*--------------------------------------XL SCREENS ---------------------------------------------- */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .loadingScreen__board {
+    height: 400px;
+    width: 650px;
+    border-radius: 24px;
+  }
+  .loadingScreen__title {
+    font-size: 1.5rem;
+  }
+  .loadingScreen__button {
+    width: 160px;
+    height: 120px;
+    padding: 8px 32px;
+    font-size: 2.5rem;
+  }
+  .loadingScreen__progress {
+    width: 500px;
+    height: 12px;
+  }
+}
+
+/*--------------------------------------LG SCREENS ---------------------------------------------- */
+/*--------------------------------------LG SCREENS ---------------------------------------------- */
+/*--------------------------------------LG SCREENS ---------------------------------------------- */
+/*--------------------------------------LG SCREENS ---------------------------------------------- */
+/*--------------------------------------LG SCREENS ---------------------------------------------- */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .loadingScreen__board {
+    height: 320px;
+    width: 520px;
+    border-radius: 19.2px;
+  }
+  .loadingScreen__title {
+    font-size: 1.2rem;
+  }
+  .loadingScreen__button {
+    width: 128px;
+    height: 96px;
+    padding: 6.4px 25.6px;
+    font-size: 2rem;
+  }
+  .loadingScreen__progress {
+    width: 400px;
+    height: 9.6px;
+  }
+}
+
+/*--------------------------------------MD SCREENS ---------------------------------------------- */
+/*--------------------------------------MD SCREENS ---------------------------------------------- */
+/*--------------------------------------MD SCREENS ---------------------------------------------- */
+/*--------------------------------------MD SCREENS ---------------------------------------------- */
+/*--------------------------------------MD SCREENS ---------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .loadingScreen__board {
+    height: 240px;
+    width: 390px;
+    border-radius: 14.4px;
+  }
+  .loadingScreen__title {
+    font-size: 0.9rem;
+  }
+  .loadingScreen__button {
+    width: 96px;
+    height: 72px;
+    padding: 4.8px 19.2px;
+    font-size: 1.5rem;
+  }
+  .loadingScreen__progress {
+    width: 300px;
+    height: 7.2px;
+  }
+}
+/*--------------------------------------SM SCREENS ---------------------------------------------- */
+/*--------------------------------------SM SCREENS ---------------------------------------------- */
+/*--------------------------------------SM SCREENS ---------------------------------------------- */
+/*--------------------------------------SM SCREENS ---------------------------------------------- */
+/*--------------------------------------SM SCREENS ---------------------------------------------- */
+@media (min-width: 1px) and (max-width: 767px) {
+  .loadingScreen__board {
+    height: 200px;
+    width: 325px;
+    border-radius: 12px;
+  }
+  .loadingScreen__title {
+    font-size: 0.75rem;
+  }
+  .loadingScreen__button {
+    width: 80px;
+    height: 60px;
+    padding: 4px 16px;
+    font-size: 1.25rem;
+  }
+  .loadingScreen__progress {
+    width: 250px;
+    height: 6px;
+  }
+}
