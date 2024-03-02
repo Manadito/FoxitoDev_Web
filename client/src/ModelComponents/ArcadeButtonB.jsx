@@ -10,7 +10,7 @@ import { useAppContext } from "../context/AppContext.context"; // Import context
 const ArcadeButtonB = forwardRef((props, ref) => {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "./models/arcade_button_b.glb",
+    `${import.meta.env.VITE_APP_BASE_URL}models/arcade_button_b.glb`,
   );
   const { actions } = useAnimations(animations, group);
 
@@ -37,9 +37,9 @@ const ArcadeButtonB = forwardRef((props, ref) => {
   );
 });
 
-useGLTF.preload("/arcade_button_b.glb");
-
-useGLTF.preload("./models/arcade_button_b.glb");
+useGLTF.preload(
+  `${import.meta.env.VITE_APP_BASE_URL}models/arcade_button_b.glb`,
+);
 ArcadeButtonB.displayName = "Arcade_Button_B";
 
 export { ArcadeButtonB };

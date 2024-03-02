@@ -11,7 +11,7 @@ import { TextureLoader, RepeatWrapping } from "three";
 export function ArcadeScreen(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "./models/arcade_screen.glb",
+    `${import.meta.env.VITE_APP_BASE_URL}models/arcade_screen.glb`,
   );
   const { actions } = useAnimations(animations, group);
 
@@ -57,4 +57,4 @@ export function ArcadeScreen(props) {
   );
 }
 
-useGLTF.preload("./models/arcade_screen.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/arcade_screen.glb`);

@@ -8,7 +8,9 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 const Arcade = forwardRef((props, ref) => {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("./models/arcade.glb");
+  const { nodes, materials, animations } = useGLTF(
+    `${import.meta.env.VITE_APP_BASE_URL}models/arcade.glb`,
+  );
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -65,7 +67,7 @@ const Arcade = forwardRef((props, ref) => {
   );
 });
 
-useGLTF.preload("./models/arcade.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/arcade.glb`);
 
 // Assign a display name to the component
 Arcade.displayName = "Arcade";

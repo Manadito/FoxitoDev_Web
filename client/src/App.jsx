@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes, HashRouter } from "react-router-dom";
+import { Route, Routes, HashRouter } from "react-router-dom"; // Wrap the jsx in HashRouter when deploying to github.
 import GameCanvas from "./GameCanvas/GameCanvas";
 import ThreeCanvas from "./views/ThreeCanvas/ThreeCanvas";
 

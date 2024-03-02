@@ -76,9 +76,15 @@ const GameCanvas = () => {
     `${import.meta.env.VITE_APP_BASE_URL}sound/bg_music.mp3`,
   ); // Create a new 'Audio' html element.
   bgMusic.loop = true; // Loop the mp3.
-  const itemPickupSound = new Audio("/sound/item_sfx.mp3"); // Create a new 'Audio' element for item pick ups.
-  const keyPickupSound = new Audio("/sound/Key_Pick_SFX.mp3"); // Create a new 'Audio' element for ground key pick ups.
-  const achievementSound = new Audio("/sound/success_sfx.mp3"); // Create a new 'Audio' element for an achievement.
+  const itemPickupSound = new Audio(
+    `${import.meta.env.VITE_APP_BASE_URL}sound/item_sfx.mp3`,
+  ); // Create a new 'Audio' element for item pick ups.
+  const keyPickupSound = new Audio(
+    `${import.meta.env.VITE_APP_BASE_URL}sound/Key_Pick_SFX.mp3`,
+  ); // Create a new 'Audio' element for ground key pick ups.
+  const achievementSound = new Audio(
+    `${import.meta.env.VITE_APP_BASE_URL}sound/success_sfx.mp3`,
+  ); // Create a new 'Audio' element for an achievement.
 
   // Initial game state variable
   const isInitialState = useRef(true); // Assuming you want to start in the initial state.

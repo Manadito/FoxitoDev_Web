@@ -10,7 +10,7 @@ import { useAppContext } from "../context/AppContext.context"; // Import context
 const ArcadeJoystick = forwardRef((props, ref) => {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "./models/arcade_joystick.glb",
+    `${import.meta.env.VITE_APP_BASE_URL}models/arcade_joystick.glb`,
   );
   const { actions } = useAnimations(animations, group);
 
@@ -42,7 +42,9 @@ const ArcadeJoystick = forwardRef((props, ref) => {
   );
 });
 
-useGLTF.preload("./models/arcade_joystick.glb");
+useGLTF.preload(
+  `${import.meta.env.VITE_APP_BASE_URL}models/arcade_joystick.glb`,
+);
 ArcadeJoystick.displayName = "ArcadeJoystick";
 
 export { ArcadeJoystick };
