@@ -5,7 +5,7 @@ import ThreeCanvas from "./views/ThreeCanvas/ThreeCanvas";
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename="/">
       <div className="grid h-screen w-screen bg-white">
         <Routes>
           <Route path="/" element={<GameCanvas />} />
