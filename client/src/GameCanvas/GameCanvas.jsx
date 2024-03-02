@@ -692,8 +692,13 @@ const GameCanvas = () => {
         },
       )
     ) {
+      // Stop game background music
+      stopBackgroundMusic();
+
       // Navigate to Three.js component
-      navigateToHeadquarters();
+      window.location.href = `${
+        import.meta.env.VITE_APP_BASE_URL
+      }#/headquarters`;
     }
   }
 
@@ -2376,7 +2381,7 @@ const GameCanvas = () => {
   //------------------------------------- NAV FUNCTION  -----------------------------------------//
   //------------------------------------- NAV FUNCTION  -----------------------------------------//
 
-  function navigateToHeadquarters() {
+  /*  function navigateToHeadquarters() {
     console.log("navigateToHeadquarters called");
     const baseUrl = import.meta.env.VITE_APP_BASE_URL || ""; // Fallback to empty string if undefined
     const targetUrl = `${baseUrl}#/headquarters`;
@@ -2393,7 +2398,7 @@ const GameCanvas = () => {
       );
       // window.location.reload(); // Uncomment if a reload is necessary in this case
     }
-  }
+  } */
 
   //--------------------------------------- GAME LOOP  ------------------------------------------//
   //--------------------------------------- GAME LOOP  ------------------------------------------//
@@ -2540,11 +2545,15 @@ const GameCanvas = () => {
               </div>
               <div className={styles.gameConsoleButtons}>
                 <div className={styles.buttonBContainer}>
-                  <button
-                    className={styles.buttonB}
-                    onClick={navigateToHeadquarters()}
-                  >
-                    <p className={styles.buttonText}>B</p>
+                  <button className={styles.buttonB}>
+                    <a
+                      href={`${
+                        import.meta.env.VITE_APP_BASE_URL
+                      }#/headquarters`}
+                      onClick={() => stopBackgroundMusic()}
+                    >
+                      <p className={styles.buttonText}>B</p>
+                    </a>
                   </button>
                 </div>
                 <div className={styles.buttonAContainer}>

@@ -11,12 +11,12 @@ import { RepeatWrapping } from "three";
 
 export function Laptop(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("./models/laptop.glb");
+  const { nodes, materials, animations } = useGLTF(`${import.meta.env.VITE_APP_BASE_URL}models/laptop.glb`);
   const { actions } = useAnimations(animations, group);
 
   const texture = useLoader(
     THREE.TextureLoader,
-    "textures/laptop_screen_uv.webp",
+    `${import.meta.env.VITE_APP_BASE_URL}textures/laptop_screen_uv.webp`,
   );
   texture.wrapT = RepeatWrapping;
   texture.repeat.set(1, -1); // Flip the texture vertically
@@ -145,4 +145,4 @@ export function Laptop(props) {
   );
 }
 
-useGLTF.preload("./models/laptop.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/laptop.glb`);
