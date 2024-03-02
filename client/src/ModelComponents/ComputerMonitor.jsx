@@ -18,7 +18,7 @@ export function ComputerMonitor(props) {
 
   const texture = useLoader(
     THREE.TextureLoader,
-    "textures/computer_screen_uv.webp",
+    `${import.meta.env.VITE_APP_BASE_URL}textures/computer_screen_uv.webp`,
   );
 
   /*  const screenMaterial = materials.computer_monitor_screen_material.clone();

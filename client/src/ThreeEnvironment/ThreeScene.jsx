@@ -118,12 +118,12 @@ function ThreeScene(props) {
 
   const computerScreen = useLoader(
     THREE.TextureLoader,
-    "/textures/computerScreen.webp",
+    `${import.meta.env.VITE_APP_BASE_URL}textures/computerScreen.webp`,
   ); // Method to load textures
 
   const arcadeScreen = useLoader(
     THREE.TextureLoader,
-    "/textures/arcadeScreen.webp",
+    `${import.meta.env.VITE_APP_BASE_URL}textures/arcadeScreen.webp`,
   );
 
   // Arcade variables
