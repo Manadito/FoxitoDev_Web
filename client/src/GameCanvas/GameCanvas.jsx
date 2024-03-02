@@ -2377,18 +2377,20 @@ const GameCanvas = () => {
   //------------------------------------- NAV FUNCTION  -----------------------------------------//
 
   function navigateToHeadquarters() {
-    const newUrl = `${
-      import.meta.env.VITE_APP_BASE_URL
-    }#/headquarters?ts=${new Date().getTime()}`;
+    const baseUrl = import.meta.env.VITE_APP_BASE_URL || ""; // Fallback to empty string if undefined
+    const targetUrl = `${baseUrl}#/headquarters`;
 
-    // Stop background music
     stopBackgroundMusic();
 
-    // Check if we're already at the target URL (ignoring the timestamp)
-    if (window.location.href.split("?")[0] !== newUrl.split("?")[0]) {
-      window.location.href = newUrl;
+    // Navigate if not already on the target page (ignoring query parameters and hash for comparison)
+    if (!window.location.href.includes(`${baseUrl}#/headquarters`)) {
+      window.location.href = targetUrl;
     } else {
-      window.location.reload();
+      // Optionally, handle the case where you're already on the page but need to force reload or reinitialize components
+      console.log(
+        "Already at headquarters, consider reinitializing components or force reload if necessary.",
+      );
+      // window.location.reload(); // Uncomment if a reload is necessary in this case
     }
   }
 
