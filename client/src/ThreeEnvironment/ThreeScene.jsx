@@ -579,7 +579,7 @@ function ThreeScene(props) {
     const loadedFrames = []; // Temporary array to hold paths
     for (let i = 1; i <= frameCount; i++) {
       const img = new Image();
-      img.src = `/images/map/frame${i}.webp`; // Corrected path
+      img.src = `${import.meta.env.VITE_APP_BASE_URL}images/map/frame${i}.webp`; // Corrected path
       loadedFrames.push(img.src); // Push to temporary array
     }
 
@@ -1741,7 +1741,7 @@ function ThreeScene(props) {
       <gridHelper args={[40]} /* This can help us visualize the floor  /> */}
       <PositionalAudio
         position={[0, 0, 0]}
-        url="./sound/General_Scene_Song.mp3"
+        url={`${import.meta.env.VITE_APP_BASE_URL}sound/General_Scene_Song.mp3`}
         loop
         distance={generalMusicDistance}
         autoplay
@@ -1955,22 +1955,28 @@ function ThreeScene(props) {
         >
           <audio // Arcade Music
             id="arcadeMusic"
-            src="/sound/Arcade_Music.mp3"
+            src={`${import.meta.env.VITE_APP_BASE_URL}sound/Arcade_Music.mp3`}
             preload="auto"
           ></audio>
           <audio // Arcade Coin Inserted Folley
             id="arcadeCoinInsert"
-            src="/sound/Coin_Insert_SFX.mp3"
+            src={`${
+              import.meta.env.VITE_APP_BASE_URL
+            }sound/Coin_Insert_SFX.mp3`}
             preload="auto"
           ></audio>
           <audio // Arcade Joystick SFX
             id="arcadeSelect"
-            src="/sound/Arcade_Select_SFX.mp3"
+            src={`${
+              import.meta.env.VITE_APP_BASE_URL
+            }sound/Arcade_Select_SFX.mp3`}
             preload="auto"
           ></audio>
           <audio // Arcade A Button SFX
             id="arcadeAccept"
-            src="/sound/Arcade_Accept_SFX.mp3"
+            src={`${
+              import.meta.env.VITE_APP_BASE_URL
+            }sound/Arcade_Accept_SFX.mp3`}
             preload="auto"
           ></audio>
           {/*     Just a side note, as for the present moment it is not possible to pass context to a html drei element. This is due to
@@ -2073,7 +2079,9 @@ function ThreeScene(props) {
         >
           <audio // Easel Music
             id="easelMusic"
-            src="/sound/Baby_Bunny_Song.mp3"
+            src={`${
+              import.meta.env.VITE_APP_BASE_URL
+            }sound/Baby_Bunny_Song.mp3`}
             preload="auto"
           ></audio>
           <EaselScreen handleObjectClick={handleObjectClick}></EaselScreen>
