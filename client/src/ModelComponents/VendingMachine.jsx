@@ -12,12 +12,14 @@ import { RepeatWrapping } from "three";
 export function VendingMachine(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "./models/vending_machine.glb",
+    `${import.meta.env.VITE_APP_BASE_URL}models/vending_machine.glb`,
   );
   const { actions } = useAnimations(animations, group);
   const texture = useLoader(
     THREE.TextureLoader,
-    "textures/vending_machine_screen_uv.webp",
+    `${
+      import.meta.env.VITE_APP_BASE_URL
+    }textures/vending_machine_screen_uv.webp`,
   );
   texture.wrapT = RepeatWrapping;
   texture.repeat.set(1, -1); // Flip the texture vertically
@@ -87,4 +89,6 @@ export function VendingMachine(props) {
   );
 }
 
-useGLTF.preload("./models/vending_machine.glb");
+useGLTF.preload(
+  `${import.meta.env.VITE_APP_BASE_URL}models/vending_machine.glb`,
+);

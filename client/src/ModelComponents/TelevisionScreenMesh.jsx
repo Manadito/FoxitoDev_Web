@@ -13,8 +13,10 @@ export function TelevisionScreenMesh({ showTelevisionScreen, ...props }) {
 
   // Loading textures
   const textures = useLoader(TextureLoader, [
-    "textures/television_screen_uv.webp",
-    "textures/television_screen_hide_carousel_uv.webp",
+    `${import.meta.env.VITE_APP_BASE_URL}textures/television_screen_uv.webp`,
+    `${
+      import.meta.env.VITE_APP_BASE_URL
+    }textures/television_screen_hide_carousel_uv.webp`,
   ]);
   // State variable to control texture change
   const [currentTexture, setCurrentTexture] = useState(textures[0]); // Initialize it as texture1
@@ -28,7 +30,9 @@ export function TelevisionScreenMesh({ showTelevisionScreen, ...props }) {
     }
   }, [showTelevisionScreen, textures]);
 
-  const { nodes, materials } = useGLTF("./models/television_screen.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.VITE_APP_BASE_URL}models/television_screen.glb`,
+  );
 
   // Fix Textures placement
 
@@ -55,4 +59,6 @@ export function TelevisionScreenMesh({ showTelevisionScreen, ...props }) {
   );
 }
 
-useGLTF.preload(".models/television_screen.glb");
+useGLTF.preload(
+  `${import.meta.env.VITE_APP_BASE_URL}models/television_screen.glb`,
+);

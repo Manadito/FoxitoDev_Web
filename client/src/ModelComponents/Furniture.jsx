@@ -8,7 +8,9 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function Furniture({ visible, ...props }) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("./models/furniture.glb");
+  const { nodes, materials, animations } = useGLTF(
+    `${import.meta.env.VITE_APP_BASE_URL}models/furniture.glb`,
+  );
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -247,4 +249,4 @@ export function Furniture({ visible, ...props }) {
   );
 }
 
-useGLTF.preload("./models/furniture.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/furniture.glb`);

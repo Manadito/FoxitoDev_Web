@@ -9,7 +9,9 @@ import { MeshStandardMaterial } from "three";
 
 export function Text(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("./models/text.glb");
+  const { nodes, materials, animations } = useGLTF(
+    `${import.meta.env.VITE_APP_BASE_URL}models/text.glb`,
+  );
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -34,4 +36,4 @@ export function Text(props) {
   );
 }
 
-useGLTF.preload("./models/text.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/text.glb`);

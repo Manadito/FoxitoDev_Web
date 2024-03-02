@@ -11,9 +11,14 @@ import { RepeatWrapping } from "three";
 
 export function Easel(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("./models/easel.glb");
+  const { nodes, materials, animations } = useGLTF(
+    `${import.meta.env.VITE_APP_BASE_URL}models/easel.glb`,
+  );
   const { actions } = useAnimations(animations, group);
-  const texture = useLoader(THREE.TextureLoader, "textures/canvas_uv.webp");
+  const texture = useLoader(
+    THREE.TextureLoader,
+    `${import.meta.env.VITE_APP_BASE_URL}textures/canvas_uv.webp`,
+  );
   texture.wrapT = RepeatWrapping;
   texture.repeat.set(1, -1); // Flip the texture vertically
   texture.offset.set(0, 1); // This corrects the vertical offset due to flipping
@@ -58,4 +63,4 @@ export function Easel(props) {
   );
 }
 
-useGLTF.preload("./models/easel.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/easel.glb`);

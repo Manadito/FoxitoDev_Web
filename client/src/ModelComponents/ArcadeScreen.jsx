@@ -18,7 +18,10 @@ export function ArcadeScreen(props) {
   // Texture variables.
   const framePaths = Array.from(
     { length: 33 },
-    (_, i) => `/textures/arcade_animation/frame${i + 1}.webp`,
+    (_, i) =>
+      `${import.meta.env.VITE_APP_BASE_URL}textures/arcade_animation/frame${
+        i + 1
+      }.webp`,
   );
   const textures = useLoader(TextureLoader, framePaths);
 

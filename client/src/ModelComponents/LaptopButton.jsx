@@ -9,7 +9,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 export function LaptopButton(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "./models/laptop_button.glb",
+    `${import.meta.env.VITE_APP_BASE_URL}models/laptop_button.glb`,
   );
 
   return (
@@ -27,4 +27,4 @@ export function LaptopButton(props) {
   );
 }
 
-useGLTF.preload("./models/laptop_button.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/laptop_button.glb`);

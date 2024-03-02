@@ -8,7 +8,9 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function Television(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("./models/television.glb");
+  const { nodes, materials, animations } = useGLTF(
+    `${import.meta.env.VITE_APP_BASE_URL}models/television.glb`,
+  );
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -51,4 +53,4 @@ export function Television(props) {
   );
 }
 
-useGLTF.preload("./models/television.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/television.glb`);

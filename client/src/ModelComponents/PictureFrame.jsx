@@ -12,12 +12,12 @@ import { RepeatWrapping } from "three";
 const PictureFrame = forwardRef((props, ref) => {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "./models/picture_frame.glb",
+    `${import.meta.env.VITE_APP_BASE_URL}models/picture_frame.glb`,
   );
   const { actions } = useAnimations(animations, group);
   const texture = useLoader(
     THREE.TextureLoader,
-    "textures/picture_frame_uv.webp",
+    `${import.meta.env.VITE_APP_BASE_URL}textures/picture_frame_uv.webp`,
   );
   texture.wrapT = RepeatWrapping;
   texture.repeat.set(1, -1); // Flip the texture vertically
@@ -46,7 +46,7 @@ const PictureFrame = forwardRef((props, ref) => {
   );
 });
 
-useGLTF.preload("./models/picture_frame.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/picture_frame.glb`);
 // Assign a display name to the component
 PictureFrame.displayName = "PictureFrame";
 

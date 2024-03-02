@@ -12,7 +12,7 @@ import { RepeatWrapping } from "three";
 export function ComputerMonitor(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "./models/computer_monitor.glb",
+    `${import.meta.env.VITE_APP_BASE_URL}models/computer_monitor.glb`,
   );
   const { actions } = useAnimations(animations, group);
 
@@ -60,4 +60,6 @@ export function ComputerMonitor(props) {
   );
 }
 
-useGLTF.preload("./models/computer_monitor.glb");
+useGLTF.preload(
+  `${import.meta.env.VITE_APP_BASE_URL}models/computer_monitor.glb`,
+);

@@ -8,7 +8,9 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function Props(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("./models/props.glb");
+  const { nodes, materials, animations } = useGLTF(
+    `${import.meta.env.VITE_APP_BASE_URL}models/props.glb`,
+  );
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -532,4 +534,4 @@ export function Props(props) {
   );
 }
 
-useGLTF.preload("./models/props.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/props.glb`);

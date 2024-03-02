@@ -9,7 +9,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 export function BabyFoxitoAnimation({ visible, ...props }) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "./models/baby_foxito_animation.glb",
+    `${import.meta.env.VITE_APP_BASE_URL}models/baby_foxito_animation.glb`,
   );
   const { actions } = useAnimations(animations, group);
   useEffect(() => {
@@ -78,4 +78,6 @@ export function BabyFoxitoAnimation({ visible, ...props }) {
   );
 }
 
-useGLTF.preload("./models/baby_foxito_animation.glb");
+useGLTF.preload(
+  `${import.meta.env.VITE_APP_BASE_URL}models/baby_foxito_animation.glb`,
+);

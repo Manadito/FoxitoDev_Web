@@ -9,8 +9,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 export function BookShelf(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "./models/book_shelf.glb",
-  
+    `${import.meta.env.VITE_APP_BASE_URL}models/book_shelf.glb`,
   );
   const { actions } = useAnimations(animations, group);
   return (
@@ -95,4 +94,4 @@ export function BookShelf(props) {
   );
 }
 
-useGLTF.preload("./models/book_shelf.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/book_shelf.glb`);

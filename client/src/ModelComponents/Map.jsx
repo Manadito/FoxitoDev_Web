@@ -8,7 +8,9 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 const Map = forwardRef((props, ref) => {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("./models/map.glb");
+  const { nodes, materials, animations } = useGLTF(
+    `${import.meta.env.VITE_APP_BASE_URL}models/map.glb`,
+  );
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -27,7 +29,7 @@ const Map = forwardRef((props, ref) => {
   );
 });
 
-useGLTF.preload("./models/map.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/map.glb`);
 
 // Assign a display name to the component
 Map.displayName = "Map";

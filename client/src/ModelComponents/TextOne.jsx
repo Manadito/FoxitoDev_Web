@@ -8,7 +8,9 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function TextOne(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("./models/text_one.glb");
+  const { nodes, materials, animations } = useGLTF(
+    `${import.meta.env.VITE_APP_BASE_URL}models/text_one.glb`,
+  );
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -33,4 +35,4 @@ export function TextOne(props) {
   );
 }
 
-useGLTF.preload("./models/text_one.glb");
+useGLTF.preload(`${import.meta.env.VITE_APP_BASE_URL}models/text_one.glb`);

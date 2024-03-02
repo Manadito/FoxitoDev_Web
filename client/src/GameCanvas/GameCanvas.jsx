@@ -696,7 +696,9 @@ const GameCanvas = () => {
       stopBackgroundMusic();
 
       // Navigate to Three.js component
-      window.location.href = "/headquarters";
+      window.location.href = `${
+        import.meta.env.VITE_APP_BASE_URL
+      }#/headquarters`;
     }
   }
 

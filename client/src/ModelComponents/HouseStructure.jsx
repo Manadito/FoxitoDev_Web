@@ -9,7 +9,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 export function HouseStructure(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "./models/house_structure.glb",
+    `${import.meta.env.VITE_APP_BASE_URL}models/house_structure.glb`,
   );
   const { actions } = useAnimations(animations, group);
   return (
@@ -165,4 +165,6 @@ export function HouseStructure(props) {
   );
 }
 
-useGLTF.preload("./models/house_structure.glb");
+useGLTF.preload(
+  `${import.meta.env.VITE_APP_BASE_URL}models/house_structure.glb`,
+);
