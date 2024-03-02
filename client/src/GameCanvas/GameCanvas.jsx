@@ -2518,7 +2518,9 @@ const GameCanvas = () => {
                 <div className={styles.buttonBContainer}>
                   <button className={styles.buttonB}>
                     <a
-                      href="/headquarters"
+                      href={`${
+                        import.meta.env.VITE_APP_BASE_URL
+                      }#/headquarters`}
                       onClick={() => stopBackgroundMusic()}
                     >
                       <p className={styles.buttonText}>B</p>
