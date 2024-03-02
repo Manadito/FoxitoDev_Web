@@ -692,13 +692,8 @@ const GameCanvas = () => {
         },
       )
     ) {
-      // Stop game background music
-      stopBackgroundMusic();
-
       // Navigate to Three.js component
-      window.location.href = `${
-        import.meta.env.VITE_APP_BASE_URL
-      }#/headquarters`;
+      navigateToHeadquarters();
     }
   }
 
@@ -2373,6 +2368,30 @@ const GameCanvas = () => {
     };
   }, [handleAPress]);
 
+  //------------------------------------- NAV FUNCTION  -----------------------------------------//
+  //------------------------------------- NAV FUNCTION  -----------------------------------------//
+  //------------------------------------- NAV FUNCTION  -----------------------------------------//
+  //------------------------------------- NAV FUNCTION  -----------------------------------------//
+  //------------------------------------- NAV FUNCTION  -----------------------------------------//
+  //------------------------------------- NAV FUNCTION  -----------------------------------------//
+  //------------------------------------- NAV FUNCTION  -----------------------------------------//
+
+  function navigateToHeadquarters() {
+    const newUrl = `${
+      import.meta.env.VITE_APP_BASE_URL
+    }#/headquarters?ts=${new Date().getTime()}`;
+
+    // Stop background music
+    stopBackgroundMusic();
+
+    // Check if we're already at the target URL (ignoring the timestamp)
+    if (window.location.href.split("?")[0] !== newUrl.split("?")[0]) {
+      window.location.href = newUrl;
+    } else {
+      window.location.reload();
+    }
+  }
+
   //--------------------------------------- GAME LOOP  ------------------------------------------//
   //--------------------------------------- GAME LOOP  ------------------------------------------//
   //--------------------------------------- GAME LOOP  ------------------------------------------//
@@ -2518,15 +2537,11 @@ const GameCanvas = () => {
               </div>
               <div className={styles.gameConsoleButtons}>
                 <div className={styles.buttonBContainer}>
-                  <button className={styles.buttonB}>
-                    <a
-                      href={`${
-                        import.meta.env.VITE_APP_BASE_URL
-                      }#/headquarters`}
-                      onClick={() => stopBackgroundMusic()}
-                    >
-                      <p className={styles.buttonText}>B</p>
-                    </a>
+                  <button
+                    className={styles.buttonB}
+                    onClick={navigateToHeadquarters()}
+                  >
+                    <p className={styles.buttonText}>B</p>
                   </button>
                 </div>
                 <div className={styles.buttonAContainer}>
