@@ -2377,6 +2377,7 @@ const GameCanvas = () => {
   //------------------------------------- NAV FUNCTION  -----------------------------------------//
 
   function navigateToHeadquarters() {
+    console.log("navigateToHeadquarters called");
     const baseUrl = import.meta.env.VITE_APP_BASE_URL || ""; // Fallback to empty string if undefined
     const targetUrl = `${baseUrl}#/headquarters`;
 
