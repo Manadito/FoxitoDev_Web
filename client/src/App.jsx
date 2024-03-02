@@ -5,7 +5,7 @@ import ThreeCanvas from "./views/ThreeCanvas/ThreeCanvas";
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={import.meta.env.VITE_APP_BASE_URL}>
       <div className="grid h-screen w-screen bg-white">
         <Routes>
           <Route path="/" element={<GameCanvas />} />
